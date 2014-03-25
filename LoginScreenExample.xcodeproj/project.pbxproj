@@ -23,6 +23,7 @@
 		0894AED318E2268F00B4E584 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0894AED118E2268F00B4E584 /* InfoPlist.strings */; };
 		0894AED518E2268F00B4E584 /* LoginScreenExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0894AED418E2268F00B4E584 /* LoginScreenExampleTests.m */; };
 		0894AEE118E229E500B4E584 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0894AEE018E229E500B4E584 /* Profile.m */; };
+		0894AEE518E22DEF00B4E584 /* LoginPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0894AEE418E22DEF00B4E584 /* LoginPasswordViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		0894AED418E2268F00B4E584 /* LoginScreenExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginScreenExampleTests.m; sourceTree = "<group>"; };
 		0894AEDF18E229E500B4E584 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		0894AEE018E229E500B4E584 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		0894AEE318E22DEF00B4E584 /* LoginPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPasswordViewController.h; sourceTree = "<group>"; };
+		0894AEE418E22DEF00B4E584 /* LoginPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPasswordViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,14 +121,11 @@
 		0894AEAC18E2268F00B4E584 /* LoginScreenExample */ = {
 			isa = PBXGroup;
 			children = (
+				0894AEE218E22DD200B4E584 /* Controller */,
 				0894AEDE18E229D700B4E584 /* Profile */,
 				0894AEB518E2268F00B4E584 /* AppDelegate.h */,
 				0894AEB618E2268F00B4E584 /* AppDelegate.m */,
 				0894AEB818E2268F00B4E584 /* Main.storyboard */,
-				0894AEBB18E2268F00B4E584 /* FirstViewController.h */,
-				0894AEBC18E2268F00B4E584 /* FirstViewController.m */,
-				0894AEBE18E2268F00B4E584 /* SecondViewController.h */,
-				0894AEBF18E2268F00B4E584 /* SecondViewController.m */,
 				0894AEC118E2268F00B4E584 /* Images.xcassets */,
 				0894AEAD18E2268F00B4E584 /* Supporting Files */,
 			);
@@ -168,6 +168,19 @@
 				0894AEE018E229E500B4E584 /* Profile.m */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		0894AEE218E22DD200B4E584 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0894AEBB18E2268F00B4E584 /* FirstViewController.h */,
+				0894AEBC18E2268F00B4E584 /* FirstViewController.m */,
+				0894AEBE18E2268F00B4E584 /* SecondViewController.h */,
+				0894AEBF18E2268F00B4E584 /* SecondViewController.m */,
+				0894AEE318E22DEF00B4E584 /* LoginPasswordViewController.h */,
+				0894AEE418E22DEF00B4E584 /* LoginPasswordViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0894AEC018E2268F00B4E584 /* SecondViewController.m in Sources */,
+				0894AEE518E22DEF00B4E584 /* LoginPasswordViewController.m in Sources */,
 				0894AEE118E229E500B4E584 /* Profile.m in Sources */,
 				0894AEB718E2268F00B4E584 /* AppDelegate.m in Sources */,
 				0894AEBD18E2268F00B4E584 /* FirstViewController.m in Sources */,

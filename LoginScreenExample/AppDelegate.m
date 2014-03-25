@@ -12,8 +12,44 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // We try to extract the profile from the user defaults
+    NSDictionary *profileDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"Profile"];
+    
+    if (profileDict) {
+        // If the profile already exists (meaning that the user is already logged in), we instantiate a globally accessible Profile object
+        self.profile = [[Profile alloc] init];
+        self.profile.username = [profileDict objectForKey:@"username"];
+        self.profile.email = [profileDict objectForKey:@"email"];
+        self.profile.accessToken = [profileDict objectForKey:@"accessToken"];
+    } else {
+        // If not, we need to replace the initial view controller with the login / password view controller
+        LoginPasswordViewController *controller = (LoginPasswordViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginPassword"];
+        self.window.rootViewController = controller;
+        controller.delegate = self;
+    }
+    
     return YES;
+}
+
+- (void)authenticationSucceededWithdictionary:(NSDictionary *)profileDict
+{
+    // We instantiate the profile
+    self.profile = [[Profile alloc] init];
+    self.profile.username = [profileDict objectForKey:@"username"];
+    self.profile.email = [profileDict objectForKey:@"email"];
+    self.profile.accessToken = [profileDict objectForKey:@"accessToken"];
+    
+    // We persist it to the user defaults
+    [self.profile saveToDefaults];
+    
+    // And then we replace the login /password view controller with the initial initial view controller
+    UIViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"MainTabBar"];
+    self.window.rootViewController = controller;
+}
+
+- (void)authenticattionFailedWithError:(NSError *)error
+{
+    // TODO Display a nice UIALertview explaining what went wrong.
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

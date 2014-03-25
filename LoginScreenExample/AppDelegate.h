@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Profile.h"
+#import "LoginPasswordViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, LoginPasswordViewControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) Profile *profile;
 
 @end

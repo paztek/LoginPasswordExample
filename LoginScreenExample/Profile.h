@@ -16,5 +16,6 @@
 // And any other property that is retrieved after login and that might be interesting to store locally
 
 - (void)saveToDefaults;
+- (void)reset;
 
 @end
