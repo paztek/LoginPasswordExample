@@ -22,6 +22,7 @@
 		0894AECB18E2268F00B4E584 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0894AEAA18E2268F00B4E584 /* UIKit.framework */; };
 		0894AED318E2268F00B4E584 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0894AED118E2268F00B4E584 /* InfoPlist.strings */; };
 		0894AED518E2268F00B4E584 /* LoginScreenExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0894AED418E2268F00B4E584 /* LoginScreenExampleTests.m */; };
+		0894AEE118E229E500B4E584 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0894AEE018E229E500B4E584 /* Profile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		0894AED018E2268F00B4E584 /* LoginScreenExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LoginScreenExampleTests-Info.plist"; sourceTree = "<group>"; };
 		0894AED218E2268F00B4E584 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0894AED418E2268F00B4E584 /* LoginScreenExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginScreenExampleTests.m; sourceTree = "<group>"; };
+		0894AEDF18E229E500B4E584 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		0894AEE018E229E500B4E584 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,7 @@
 		0894AEAC18E2268F00B4E584 /* LoginScreenExample */ = {
 			isa = PBXGroup;
 			children = (
+				0894AEDE18E229D700B4E584 /* Profile */,
 				0894AEB518E2268F00B4E584 /* AppDelegate.h */,
 				0894AEB618E2268F00B4E584 /* AppDelegate.m */,
 				0894AEB818E2268F00B4E584 /* Main.storyboard */,
@@ -155,6 +159,15 @@
 				0894AED118E2268F00B4E584 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0894AEDE18E229D700B4E584 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0894AEDF18E229E500B4E584 /* Profile.h */,
+				0894AEE018E229E500B4E584 /* Profile.m */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0894AEC018E2268F00B4E584 /* SecondViewController.m in Sources */,
+				0894AEE118E229E500B4E584 /* Profile.m in Sources */,
 				0894AEB718E2268F00B4E584 /* AppDelegate.m in Sources */,
 				0894AEBD18E2268F00B4E584 /* FirstViewController.m in Sources */,
 				0894AEB318E2268F00B4E584 /* main.m in Sources */,
